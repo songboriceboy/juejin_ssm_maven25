@@ -86,7 +86,7 @@
 <div class="app-height-58">
 
 </div>
-<div class="app-cover uk-height-1-1">
+<div class="app-cover">
     <div class="app-20">
 
     </div>
@@ -102,41 +102,51 @@
                             <div>${article.username}</div>
                             <div>${article.createtime}</div>
                         </div>
-                        <h2 class="article-title uk-margin-large-left">
+                        <h2 class="article-title uk-text-center uk-text-bold">
                             ${article.title}
                         </h2>
-                        阅读量：<div>${article.viewcount}</div>
-                        <div class="topic-detail">
+
+                        <div class="topic-detail uk-margin-large-left uk-margin-large-right">
                             ${article.html_content}
                         </div>
+
                     </div>
+                    <hr>
+                    <div>
+                        <c:choose>
+                            <c:when test="${userinfo == null}">
+                                <div class="login uk-text-center">
+                                    要留言请先<a href="${pageContext.request.contextPath}/login">登录</a>
+                                </div>
 
-                    <c:choose>
-                        <c:when test="${userinfo == null}">
-                            要留言请先<a href="${pageContext.request.contextPath}/login">登录</a>
-                        </c:when>
-                        <c:otherwise>
-                            <div>评论</div>
+                            </c:when>
+                            <c:otherwise>
+                                <div class="reply" id="final-reply">
+                                    <form class="uk-form" action="#" method="post" id="reply-form">
+                                        <div class="uk-form-row">
+                                            <input type="hidden" name="aid" value="${article.id}" id="aid">
+                                            <div id="editor" class="uk-margin-large-left uk-margin-large-right">
 
-                            <div class="reply" id="final-reply">
-                                <form class="uk-form" action="#" method="post" id="reply-form">
-                                    <div class="uk-form-row">
-                                        <input type="hidden" name="aid" value="${article.id}" id="aid">
-                                        <div id="editor" class="uk-margin-large-left uk-margin-large-right">
+                                            </div>
+                                            <div class="uk-text-right uk-margin-top uk-margin-large-left uk-margin-large-right">
+                                                <input type="button" class="uk-button uk-button-primary" value="提交评论" onclick="addComment();">
+                                            </div>
 
                                         </div>
-                                        <input type="button" value="评论" onclick="addComment();">
-                                    </div>
-                                </form>
-                            </div>
+                                    </form>
+                                </div>
 
-                        </c:otherwise>
-                    </c:choose>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+
 
                     <%--留言列表--%>
-                    全部留言
+
                     <hr>
-                    <ul class="uk-comment-list" id="comment_list">
+                    <h3 class="uk-text-center">全部留言</h3>
+                    <ul class="uk-comment-list uk-margin-large-left uk-margin-large-right" id="comment_list">
+
                         <c:forEach items="${comments}" var="comment">
                             <li class="reply-item">
                                 <article class="uk-comment">

@@ -35,7 +35,7 @@
 
 <%--网页主体--%>
 
-  <div class="app-cover">
+  <div class="app-cover  uk-height-1-1">
 
       <div class="app-35">
 
