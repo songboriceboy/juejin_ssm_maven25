@@ -69,7 +69,7 @@
     </div>
 </header>
 
-<div class="app-height-65">
+<%--<div class="app-height-65">--%>
 
-</div>
+<%--</div>--%>
 

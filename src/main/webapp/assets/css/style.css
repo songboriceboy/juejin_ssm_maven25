@@ -30,6 +30,10 @@
     height: 65px;
 }
 
+.app-height-58{
+    height: 58px;
+}
+
 
 .app-cate{
     background-color: #fff;
@@ -53,6 +57,9 @@
     height: 20px;
 }
 
+.app-35{
+    height: 35px;
+}
 .app-blog-item{
 
     border-bottom: 1px solid rgba(178,186,194,.15);
@@ -71,4 +78,7 @@
     color: white;
     font-size: 12px;
     margin-right: 6px;
+}
+.b100{
+    height: 100px;
 }

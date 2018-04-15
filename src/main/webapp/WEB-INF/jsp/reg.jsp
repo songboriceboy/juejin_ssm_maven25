@@ -12,14 +12,10 @@
     <meta name="viewport"
           content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link href="${pageContext.request.contextPath}/assets/uikit-2.25.0/css/uikit.almost-flat.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/style.css?v=0.1" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/assets/js/jquery-3.3.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/uikit-2.25.0/js/uikit.js"></script>
-    <style>
-        .b100{
-            height: 100px;
-        }
-    </style>
+
     <script>
         function checkUser() {
             var input = document.getElementById('username');
@@ -47,7 +43,7 @@
 <body>
 <%@include file="common/header.jsp"%>
 <div class="b100"></div>
-<div class="mb-cover">
+<div>
     <div class="b20"></div>
     <div class="uk-container uk-container-center">
         <div class="uk-panel uk-panel-box">

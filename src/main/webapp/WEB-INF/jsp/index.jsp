@@ -18,7 +18,9 @@
   <body>
    
   <%@include file="common/header.jsp"%>
+  <div class="app-height-65">
 
+  </div>
   <%--分类导航--%>
     <div class="uk-container uk-container-center">
         <div class="uk-panel uk-panel-box app-cate">
@@ -35,7 +37,7 @@
 
   <div class="app-cover">
 
-      <div class="app-20">
+      <div class="app-35">
 
       </div>
 
