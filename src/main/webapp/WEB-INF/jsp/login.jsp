@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>登录</title>
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link href="${pageContext.request.contextPath}/assets/uikit-2.25.0/css/uikit.almost-flat.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/assets/js/jquery-3.3.1.min.js"></script>
