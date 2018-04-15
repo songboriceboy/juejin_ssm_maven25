@@ -13,6 +13,15 @@ public class ArticleInfo {
       private Timestamp createtime;
       private Integer userid;
       private Integer viewcount;
+    private Integer cate_id;
+
+    public Integer getCate_id() {
+        return cate_id;
+    }
+
+    public void setCate_id(Integer cate_id) {
+        this.cate_id = cate_id;
+    }
 
     public Integer getViewcount() {
         return viewcount;

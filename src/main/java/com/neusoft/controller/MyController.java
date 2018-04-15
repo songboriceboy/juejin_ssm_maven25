@@ -1,11 +1,14 @@
 package com.neusoft.controller;
 
+import com.neusoft.domain.CategoryInfo;
 import com.neusoft.domain.UserInfo;
 import com.neusoft.mapper.UserMapper;
 
+import com.neusoft.service.CategoryService;
 import com.neusoft.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -28,12 +32,15 @@ public class MyController {
 
     @Autowired
     UserService userService;
-
+    @Autowired
+    CategoryService categoryService;
     @RequestMapping("go_article_page")
-    public String gotoWriteArticlePage()
+    public String gotoWriteArticlePage(Model model)
     {
         //判断用户当前是否登录，如果没登录，跳转到登录页面
         //否则
+        List<CategoryInfo> categoryInfoList = categoryService.getAllCategroies();
+        model.addAttribute("cates",categoryInfoList);
         return "add_article";
     }
 
