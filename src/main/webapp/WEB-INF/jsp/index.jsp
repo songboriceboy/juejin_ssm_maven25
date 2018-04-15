@@ -20,23 +20,9 @@
     <div class="uk-container uk-container-center">
         <div class="uk-panel uk-panel-box app-cate">
             <ul class="uk-subnav uk-position-relative">
-                <li><a href="#">问与答</a></li>
-
-                <li><a href="#">技术分享</a></li>
-
-                <li><a href="#">程序员</a></li>
-
-                <li><a href="#">分享创造</a></li>
-
-                <li><a href="#">分享发现</a></li>
-
-                <li><a href="#">java</a></li>
-
-                <li><a href="#">htmlcss</a></li>
-
-                <li><a href="#">javascript</a></li>
-
-
+                <c:forEach items="${cates}" var="cate">
+                    <li><a href="#">${cate.category_name}</a></li>
+                </c:forEach>
                 <li class="uk-position-absolute app-all-tag"><a href="#">标签管理</a></li>
             </ul>
         </div>

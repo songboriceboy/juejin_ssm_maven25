@@ -24,5 +24,14 @@ create table commentinfo
   articleid int not null DEFAULT 0
 )ENGINE=INNODB;
 
+create table category_info(
+	id int not null PRIMARY key auto_increment,
+	category_name varchar(100) not null DEFAULT ''
+)ENGINE=INNODB;
+
+INSERT INTO `category_info` VALUES ('1', '前端');
+INSERT INTO `category_info` VALUES ('2', '后端');
+INSERT INTO `category_info` VALUES ('3', '阅读');
+
 alter table userinfo add column avatar varchar(500) not null default '';
 alter table articleinfo add column viewcount int not null default 1
