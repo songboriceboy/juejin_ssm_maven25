@@ -9,6 +9,10 @@
 <html>
 <head>
     <title>注册</title>
+    <link href="${pageContext.request.contextPath}/assets/uikit-2.25.0/css/uikit.almost-flat.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/uikit-2.25.0/js/uikit.js"></script>
     <script>
         function checkUser() {
             var input = document.getElementById('username');

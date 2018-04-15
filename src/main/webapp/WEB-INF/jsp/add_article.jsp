@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/editor-md-master/css/editormd.css" />
     <script src="${pageContext.request.contextPath}/assets/js/jquery-3.3.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/editor-md-master/editormd.min.js"></script>
+    <link href="${pageContext.request.contextPath}/assets/uikit-2.25.0/css/uikit.almost-flat.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/assets/uikit-2.25.0/js/uikit.js"></script>
     <script>
         $(function () {
 
