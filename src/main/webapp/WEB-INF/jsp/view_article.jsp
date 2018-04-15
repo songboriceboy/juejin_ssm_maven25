@@ -71,7 +71,7 @@
     <h2>${article.title}</h2>
     <p>${article.username}</p>
     <div>${article.createtime}</div>
-    <div>${article.content}</div>
+    <div>${article.html_content}</div>
     阅读量：<div>${article.viewcount}</div>
     <hr>
 

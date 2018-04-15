@@ -8,7 +8,9 @@ create table articleinfo
 (
   id int not null PRIMARY key auto_increment,
   title varchar(200) not null DEFAULT '',
-  content longtext not null DEFAULT '',
+  markdown_content longtext not null DEFAULT '',
+  html_content longtext not null DEFAULT '',
+  viewcount int not null default 1,
 	createtime datetime not null DEFAULT '1900-01-01 01:01:01',
 	userid int not null DEFAULT 0
 )ENGINE=INNODB;

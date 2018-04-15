@@ -27,17 +27,20 @@ import java.util.Map;
 @Controller
 public class ArticleController {
 
-
     @Autowired
     ArticleService articleService;
 
     @RequestMapping("add_article")
     public String addArtcile(ArticleInfo articleInfo, HttpServletRequest request)
     {
+        String strHtml = request.getParameter("test-editormd-html-code");
+        String strMarkdown = request.getParameter("topic_markdown_content");
         //获取用户id
         HttpSession httpSession = request.getSession();
         UserInfo userInfo = (UserInfo)httpSession.getAttribute("userinfo");
         articleInfo.setUserid(userInfo.getId());
+        articleInfo.setHtml_content(strHtml);
+        articleInfo.setMarkdown_content(strMarkdown);
 
         articleService.addArticle(articleInfo);
 

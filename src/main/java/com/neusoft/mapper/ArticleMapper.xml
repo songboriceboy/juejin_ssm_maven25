@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neusoft.mapper.ArticleMapper">
     <insert id="addArticle" parameterType="ArticleInfo">
-        insert into articleinfo (title, content,createtime,userid)
-        values(#{title},#{content},#{createtime},#{userid})
+        insert into articleinfo (title, html_content,markdown_content,createtime,userid)
+        values(#{title},#{html_content},#{markdown_content},#{createtime},#{userid})
     </insert>
     <select id="getAllArticles" resultType="map">
         select articleinfo.viewcount, userinfo.avatar,articleinfo.id,articleinfo.title,articleinfo.createtime,userinfo.username from articleinfo
@@ -15,7 +15,7 @@ order by articleinfo.createtime desc
 
     <select id="getArticleById" parameterType="int" resultType="map">
         select articleinfo.viewcount,articleinfo.id,articleinfo.title,articleinfo.createtime
-        ,articleinfo.content,userinfo.username from articleinfo
+        ,articleinfo.html_content,userinfo.username from articleinfo
         join userinfo on userinfo.id = articleinfo.userid
          where articleinfo.id = #{value}
     </select>

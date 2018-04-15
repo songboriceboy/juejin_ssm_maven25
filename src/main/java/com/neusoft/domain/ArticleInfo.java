@@ -8,7 +8,8 @@ import java.sql.Timestamp;
 public class ArticleInfo {
       private Integer id;
       private String title;
-      private String content;
+      private String html_content;
+      private String markdown_content;
       private Timestamp createtime;
       private Integer userid;
       private Integer viewcount;
@@ -45,12 +46,20 @@ public class ArticleInfo {
         this.title = title;
     }
 
-    public String getContent() {
-        return content;
+    public String getHtml_content() {
+        return html_content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setHtml_content(String html_content) {
+        this.html_content = html_content;
+    }
+
+    public String getMarkdown_content() {
+        return markdown_content;
+    }
+
+    public void setMarkdown_content(String markdown_content) {
+        this.markdown_content = markdown_content;
     }
 
     public Timestamp getCreatetime() {
