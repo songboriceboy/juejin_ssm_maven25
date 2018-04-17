@@ -51,7 +51,7 @@
                             <ul class="uk-nav uk-nav-dropdown">
                                 <li><a href="${pageContext.request.contextPath}/currentuser/go_article_page"><i class="uk-icon-pencil uk-icon-justify "></i>写文章</a></li>
                                 <li class="uk-nav-divider"></li>
-                                <li><a href="#"><i class="uk-icon-home uk-icon-justify "></i>我的主页</a></li>
+                                <li><a href="${pageContext.request.contextPath}/currentuser/me"><i class="uk-icon-home uk-icon-justify "></i>我的主页</a></li>
                                 <li><a href="#"><i class="uk-icon-heartbeat uk-icon-justify "></i>我喜欢的</a></li>
                                 <li><a href="#"><i class="uk-icon-book uk-icon-justify "></i>我的收藏集</a></li>
                                 <li><a href="#"><i class="uk-icon-film uk-icon-justify "></i>标签管理</a></li>
